@@ -1,0 +1,29 @@
+{
+  "name": "order-manager",
+  "version": "1.0.0",
+  "description": "Application to manage orders",
+  "main": "app.js",
+  "scripts": {
+    "server": "nodemon app.js",
+    "client": "npm run serve --prefix client",
+    "client-build": "npm run build --prefix client",
+    "serve-client": "serve -l 3000 -s client/dist",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "prod": "concurrently \"npm run server\" \"npm run serve-client\""
+  },
+  "author": "Manny Mendoza",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "moment-timezone": "^0.5.27",
+    "mysql2": "^1.7.0",
+    "sequelize": "^5.21.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.0",
+    "morgan": "^1.9.1"
+  }
+}
